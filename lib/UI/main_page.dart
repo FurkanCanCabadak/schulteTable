@@ -26,7 +26,7 @@ class _MainPageUIState extends State<MainPageUI> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
-                      onTap: () => GameType.ClassicOrginal,
+                      onTap: () => GameType.ClassicOriginal,
                       child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle, color: Colors.blue),
