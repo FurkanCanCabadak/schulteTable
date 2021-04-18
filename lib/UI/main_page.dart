@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Services/game_mode.dart';
+import 'package:flutter_application_1/Services/number_services.dart';
 
 class MainPageUI extends StatefulWidget {
   @override
@@ -26,7 +27,7 @@ class _MainPageUIState extends State<MainPageUI> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
-                      onTap: () => GameType.ClassicOriginal,
+                      onTap: () => NumberServices().random_numbers,
                       child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle, color: Colors.blue),
