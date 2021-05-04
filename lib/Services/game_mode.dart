@@ -6,3 +6,11 @@ enum GameType {
   Reaction,
   Memory
 }
+enum String {
+  ClassicOriginal,
+  ClassicOriginalReverse,
+  ClassicLight,
+  ClassicLightReverse,
+  Reaction,
+  Memory
+}
