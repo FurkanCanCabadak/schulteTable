@@ -29,6 +29,7 @@ class _MainPageUIState extends State<MainPageUI> {
                     child: InkWell(
                       onTap: () => runApp(GamePage(
                         gameType: GameType.ClassicOriginal,
+                        gamemode: String.ClassicOriginal,
                       )),
                       child: Container(
                         decoration: BoxDecoration(
