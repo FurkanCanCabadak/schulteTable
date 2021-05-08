@@ -4,7 +4,7 @@ import 'package:flutter_application_1/widgets/number_button.dart';
 
 class GamePage extends StatefulWidget {
   final gamemodes.GameType gameType;
-  final gamemodes.String gamemode;
+  final String gamemode;
   const GamePage({@required this.gameType, @required this.gamemode});
 
   @override
@@ -14,21 +14,21 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.gamemode.toString()),
-      ),
-      body: Container(
-        child: GridView.builder(
-          // ignore: missing_required_param
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              crossAxisSpacing: 2, mainAxisSpacing: 2),
-
-          itemCount: 25,
-          itemBuilder: (context, index) {
-            return NumberButton();
-          },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(widget.gamemode.toString()),
         ),
+        body: GridView.builder(
+            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 80,
+                crossAxisSpacing: 2,
+                mainAxisSpacing: 2),
+            itemCount: 25,
+            itemBuilder: (context, index) {
+              return NumberButton();
+            }),
       ),
     );
   }
