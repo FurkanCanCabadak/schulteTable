@@ -25,10 +25,15 @@ class _MainPageUIState extends State<MainPageUI> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
-                    onTap: () => runApp(GamePage(
-                      gameType: GameType.ClassicOriginal,
-                      gamemode: 'Classic Original',
-                    )),
+                    onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GamePage(
+                                  gameType: GameType.ClassicOriginal,
+                                )),
+                      ),
+                    },
                     child: Container(
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, color: Colors.blue),

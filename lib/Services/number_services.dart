@@ -12,7 +12,6 @@ class NumberServices {
     for (int i = 1; i <= 25; i++) {
       random_numbers.add(i);
     }
-    print(random_numbers);
     random_numbers.shuffle();
     return random_numbers;
   }
